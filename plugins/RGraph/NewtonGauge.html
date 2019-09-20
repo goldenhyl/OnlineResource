@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://www.rgraph.net/demos/gauge-ajax.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./demos.css" type="text/css" media="screen">
+    
+    <script src="./RGraph.common.core.js"></script>
+    <script src="./RGraph.common.dynamic.js"></script>
+    <script src="./RGraph.common.effects.js"></script>
+    <script src="./RGraph.gauge.js"></script>
+    <script src="../ToolsCommon70.js"></script>
+   
+     <script src="../ToolsCommon70.js"></script>
+</head>
+<body>
+  
+
+    <div id="cvs_rgraph_domtext_wrapper" class="rgraph_domtext_wrapper" style="overflow: visible; width: 250px; height: 250px; display: inline-block; position: relative;">
+    <canvas id="cvs" width="250" height="250" style="position: absolute; left: 0px; top: 0px; display: inline; float: none; cursor: default;">[No canvas support]</canvas>
+   </div>
+    
+    <script>
+        window.onload = function ()
+        {
+        
+         var curval=300;      
+       try
+        {
+              var SGWorld = new ActiveXObject("TerraExplorerX.SGWorld70");
+              var ID= GetParamValue("ID", "0");
+              curval=parseFloat(SGWorld.ProjectTree.GetClientData(ID,"Value"));             
+	}
+	catch (e) { alert(e); }
+	
+            var gauge = new RGraph.Gauge({
+                id: 'cvs',
+                min:0,
+                max: 30,
+                value: curval,
+                options: {                
+                    titleTop: '拉力计',
+                    titleBold: true,
+                    borderOutline: 'transparent',
+                    needleColors: ['red'],
+                    needleType: 'line',
+                    centerpinRadius: 0.1,             
+                    titleBottom: 'K.N',
+                    titleBottomColor: '#aaa',      
+                    textAccessible: true
+                }
+            }).on('draw', function (obj)
+            {
+                var co = obj.context;
+    
+                // This circle becomes the border of the centerpin
+                RGraph.path2(co, ['b', 'a', obj.centerx, obj.centery, 10, 0, RGraph.TWOPI, false, 'f', 'black']);
+            })
+            .draw();
+
+
+
+
+            var delay = 1500;
+
+
+
+
+            function myAJAXCallback(num)
+            {
+                gauge.value = num;
+                gauge.grow()
+                
+                
+                // Make another AJAX call after the delay (which is in milliseconds)
+                setTimeout(function ()
+                    {
+                        RGraph.AJAX.getNumber('/getdata.html', myAJAXCallback);
+                    },
+                    delay);
+            }
+
+            /**
+            * Make the AJAX call every so often (contolled by the delay variable)
+            */
+            setTimeout(function () {RGraph.AJAX.getNumber('/getdata.html', myAJAXCallback);}, delay);
+        };
+    </script>
+
+
+
+</body></html>

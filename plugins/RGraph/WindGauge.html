@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.rgraph.net/demos/gauge-customised.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./demos.css" type="text/css" media="screen">
+    
+    <script src="./RGraph.common.core.js"></script>
+    <script src="./RGraph.gauge.js"></script>    
+   <script src="../ToolsCommon70.js"></script>
+     
+</head>
+<body>
+
+    <div id="cvs_rgraph_domtext_wrapper" class="rgraph_domtext_wrapper" style="overflow: visible; width: 300px; height: 300px; display: inline-block; position: relative;"><canvas id="cvs" width="300" height="300" style="position: absolute; left: 0px; top: 0px; display: inline; float: none;">[No canvas support]</canvas><span id="100_236_0_cvs" style="position: absolute; display: inline; left: 100px; top: 215.603px; color: rgb(255, 255, 255); font-family: &quot;Segoe UI&quot;, Arial, Verdana, sans-serif; font-weight: normal; font-style: normal; font-size: 12pt; white-space: nowrap; text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; pointer-events: auto;">0</span><span id="50_150_40_cvs" style="position: absolute; display: inline; left: 50px; top: 139.5px; color: rgb(255, 255, 255); font-family: &quot;Segoe UI&quot;, Arial, Verdana, sans-serif; font-weight: normal; font-style: normal; font-size: 12pt; white-space: nowrap; text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; pointer-events: auto;">40</span><span id="99_63_80_cvs" style="position: absolute; display: inline; left: 100px; top: 63.3975px; color: rgb(255, 255, 255); font-family: &quot;Segoe UI&quot;, Arial, Verdana, sans-serif; font-weight: normal; font-style: normal; font-size: 12pt; white-space: nowrap; text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; pointer-events: auto;">80</span><span id="199_63_120_cvs" style="position: absolute; display: inline; left: 174px; top: 63.3975px; color: rgb(255, 255, 255); font-family: &quot;Segoe UI&quot;, Arial, Verdana, sans-serif; font-weight: normal; font-style: normal; font-size: 12pt; white-space: nowrap; text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; pointer-events: auto; text-align: right;">120</span><span id="250_149_160_cvs" style="position: absolute; display: inline; left: 224px; top: 139.5px; color: rgb(255, 255, 255); font-family: &quot;Segoe UI&quot;, Arial, Verdana, sans-serif; font-weight: normal; font-style: normal; font-size: 12pt; white-space: nowrap; text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; pointer-events: auto; text-align: right;">160</span><span id="200_236_200_cvs" style="position: absolute; display: inline; left: 174px; top: 215.603px; color: rgb(255, 255, 255); font-family: &quot;Segoe UI&quot;, Arial, Verdana, sans-serif; font-weight: normal; font-style: normal; font-size: 12pt; white-space: nowrap; text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; pointer-events: auto; text-align: right;">200</span><span id="150_125_Air_Speed_cvs" style="position: absolute; display: inline; left: 93px; top: 89px; color: rgb(255, 255, 255); font-family: Impact; font-weight: normal; font-style: italic; font-size: 22pt; white-space: nowrap; text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; pointer-events: auto; text-align: center;">Air Speed</span><span id="150_204_Knots_cvs" style="position: absolute; display: inline; left: 128px; top: 204px; color: rgb(204, 204, 204); font-family: Impact; font-weight: normal; font-style: italic; font-size: 14pt; white-space: nowrap; text-shadow: rgba(0, 0, 0, 0) 0px 0px 0px; pointer-events: auto; text-align: center;">Knots</span></div>
+    
+    <script>
+        window.onload = function ()
+        {
+        
+         var curval=72;      
+       try
+        {
+              var SGWorld = new ActiveXObject("TerraExplorerX.SGWorld70");
+              var ID= GetParamValue("ID", "0");
+              curval=parseFloat(SGWorld.ProjectTree.GetClientData(ID,"Value"));             
+	}
+	catch (e) { alert(e); }
+	
+	
+            var gauge = new RGraph.Gauge({
+                id: 'cvs',
+                min: 0,
+                max: 200,
+                value: [curval,12],
+                options: {
+                    titleTop: 'Air Speed',
+                    titleTopSize: 'italic 22',
+                    titleTopFont: 'Impact',
+                    titleTopColor: 'white',
+                    titleBottom: 'Knots',
+                    titleBottomSize: 'italic 14',
+                    titleBottomFont: 'Impact',
+                    titleBottomColor: '#ccc',
+                    titleBottomPos: 0.4,
+                    backgroundColor: 'black',
+                    backgroundGradient: true,
+                    centerpinColor: '#666',
+                    needleSize: [null, 50],
+                    needleColors: ['Gradient(transparent:white:white:white:white:white)', 'Gradient(transparent:#d66:#d66:#d66:#d66)'],
+                    textColor: 'white',
+                    tickmarksBigColor: 'white',
+                    tickmarksMediumColor: 'white',
+                    tickmarksSmallColor: 'white',
+                    borderOuter: '#666',
+                    borderInner: '#333',
+                    colorsRanges: [[160,200,'rgba(255,0,0,1)'], [120,160,'rgba(255,255,0,0.95']],
+                    textAccessible: true
+                }
+            }).draw();
+        };
+    </script>
+
+
+
+</body></html>

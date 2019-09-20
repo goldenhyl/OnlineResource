@@ -1,0 +1,828 @@
+﻿<style>
+      .s8 {font-family:  Arial, Helvetica; font-size: 14px; font-style: normal; font-weight: normal; color: #3B3B3B; text-decoration: none;}
+      .s9 {font-family:  Arial, Helvetica; font-size: 13px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none;}
+      .s8w {font-family:  Arial, Helvetica; font-size: 11px; font-style: normal; font-weight: normal; color: #FFFFFF; text-decoration: underline;}
+      .s12 {font-family:  Arial, Helvetica; font-size: 20px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none;}
+
+table.altrowstable {
+     font-family: verdana,arial,sans-serif;
+     font-size:11px;
+     color:#333333;
+     border-width: 1px;
+     border-color: #a9c6c9;
+     border-collapse: collapse;
+ }
+ table.altrowstable th {
+     border-width: 1px;
+     padding: 4px;
+     border-style: solid;
+     border-color: #a9c6c9;
+ }
+ table.altrowstable tr{ 
+	 background-color:#FFFFFF;
+ }
+ table.altrowstable td {
+     border-width: 1px;
+     padding: 4px;	 
+     border-style: solid;
+     border-color: #a9c6c9;
+ }
+ .oddrowcolor{
+     background-color:#d4e3e5;
+ }
+ .evenrowcolor{
+     background-color:#c3dde0;
+ }
+</style>	
+
+<table cellspacing="0" cellpadding="0" width="98%"  class="altrowstable" id="alternatecolor">
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=7 rowspan=3 height=62 width=841 style='height:46.8pt;
+  width:632pt'>方案工程数量统计</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+ </tr>
+ <tr height=20>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 rowspan=11 height=209 width=114 >方案概况</td>
+  <td colspan=2>方案名称</td>
+  <td colspan=3 class=xl96 >[DT4]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>生成日期</td>
+  <td colspan=3 >[DT5]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td width=147 '>线路总长</td>
+  <td>Km</td>
+  <td colspan=3 >[DT6]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 width=211 >起始里程</td>
+  <td colspan=3 >[DT7]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>终止里程</td>
+  <td colspan=3 >[DT8]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>交叉河沟道路</td>
+  <td>条</td>
+  <td colspan=3 >[DT9]</td>
+ </tr>
+ 
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>新建横通工程</td>
+  <td>座</td>
+  <td colspan=3 >[DT10]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>改移道路</td>
+  <td>条</td>
+  <td colspan=3 >[DT11]</td>
+ </tr>
+
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>桥隧总长</td>
+  <td>Km</td>
+  <td colspan=3 >[DT12]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>桥隧比</td>
+  <td>%</td>
+  <td colspan=3 >[DT13]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>展线系数</td>
+  <td colspan=3 >[DT14]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=4>预留行</td>
+  <td colspan=3 >[DT15]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=4>预留行</td>
+  <td colspan=3 >[DT16]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=4>预留行</td>
+  <td colspan=3 >[DT17]</td>
+ </tr>
+
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=9 height=247 width=36>车站</td>
+  <td colspan=2>站数</td>
+  <td>站</td>
+  <td colspan=3 >[DT18]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=6>[DT19]</td> 
+ </tr>
+ 
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=7 height=95>统计</td>
+  <td colspan=2 >起点站</td>  
+  <td colspan=3 >[DT24]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 >终点站</td>  
+  <td colspan=3 >[DT25]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最大站间距</td>
+  <td>km</td>
+  <td colspan=3 >[DT26]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最小站间距</td>
+  <td>km</td>
+  <td colspan=3 >[DT27]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>平均站间距</td>
+  <td>km</td>
+  <td colspan=3 >[DT28]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最大站限界(V2.0)</td>
+  <td>m</td>
+  <td colspan=3 >[DT29]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最小站限界(V2.0)</td>
+  <td>m</td>
+  <td colspan=3 >[DT30]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=9 height=171 width=36>桥梁统计</td>
+  <td colspan=2>桥数</td>
+  <td>座</td>
+  <td colspan=3 >[DT31]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=3 height=57  width=78>其中</td>
+  <td>特大桥</td>
+  <td>座-延米</td>
+  <td colspan=3 >[DT32]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>大桥</td>
+  <td>座-延米</td>
+  <td colspan=3 >[DT33]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>中桥</td>
+  <td>座-延米</td>
+  <td colspan=3 >[DT34]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>桥总长</td>
+  <td>Km</td>
+  <td colspan=3 >[DT35]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2  width=225 >桥比%</td>
+  <td>%</td>
+  <td colspan=3 >[DT36]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>最长桥梁</td>
+  <td>m</td>
+  <td colspan=3 >[DT37]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>最短桥梁</td>
+  <td>m</td>
+  <td colspan=3 >[DT38]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2  width=225 >预留行</td>
+  <td>—</td>
+  <td colspan=3 >[DT39]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 rowspan=7 height=133 width=114 >隧道统计</td>
+  <td>隧道数</td>
+  <td>座</td>
+  <td colspan=3 >[DT40]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>隧道总长</td>
+  <td>Km</td>
+  <td colspan=3 >[DT41]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>隧道比</td>
+  <td>%</td>
+  <td colspan=3 >[DT42]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>》1000米隧道</td>
+  <td>座-延米</td>
+  <td colspan=3 >[DT43]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>&lt; 1000米隧道</td>
+  <td>座-延米</td>
+  <td colspan=3 >[DT44]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最长隧道</td>
+  <td>m</td>
+  <td colspan=3 >[DT45]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最短隧道</td>
+  <td>m</td>
+  <td colspan=3 >[DT46]</td>
+ </tr>
+ 
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=4 width=325>预留行</td>
+  <td colspan=3 >[DT47]</td>
+ </tr>
+ 
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=9 height=247 width=36>横通工程</td>
+  <td rowspan=3  width=78 style=';width:59pt'>既有交叉因素</td>
+  <td>平交道路</td>
+  <td>处</td>
+  <td colspan=3 >[DT201]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>河沟</td>
+  <td>处</td>
+  <td colspan=3 >[DT202]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>其它(含水准点)</td>
+  <td>处</td>
+  <td colspan=3 >[DT203]</td>
+ </tr> 
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=6 height=57  width=78>新建横通工程</td>
+  <td>框架涵</td>
+  <td>座</font></td>
+  <td colspan=3 >[DT204]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>圆涵</td>
+  <td>座</td>
+  <td colspan=3 >[DT205]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>框架桥</td>
+  <td>座</td>
+  <td colspan=3 >[DT206]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>小桥</td>
+  <td>座</td>
+  <td colspan=3 >[DT207]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>天桥</td>
+  <td>座</td>
+  <td colspan=3 >[DT208]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>渡槽</td>
+  <td>座</td>
+  <td colspan=3 >[DT209]</td>
+ </tr>
+ 
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=13 height=247 width=36>平面统计</td>
+  <td rowspan=10  width=78 style=';width:59pt'>平曲线</td>
+  <td>曲线数量</td>
+  <td>段</td>
+  <td colspan=3 >[DT48]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最小曲线半径</td>
+  <td>m</td>
+  <td colspan=3 >[DT49]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最大曲线半径</td>
+  <td>m</td>
+  <td colspan=3 >[DT50]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>小半径数量</td>
+  <td class=xl86 width=64 style=';width:48pt'>400</td>
+  <td colspan=3 >[DT51]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>曲线地段长度及比重</td>
+  <td>Km-%</td>
+  <td colspan=3 >[DT52]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最长曲线段</td>
+  <td>m</td>
+  <td colspan=3 >[DT53]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最短曲线段</td>
+  <td>m</td>
+  <td colspan=3 >[DT54]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最长圆曲线</td>
+  <td>m</td>
+  <td colspan=3 >[DT55]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最短圆曲线</td>
+  <td>m</td>
+  <td colspan=3 >[DT56]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最大偏角</td>
+  <td>D.mmss</td>
+  <td colspan=3 >[DT57]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=3 height=57  width=78>夹直线</td>
+  <td>直线地段长度及比重</td>
+  <td>Km-%</td>
+  <td colspan=3 >[DT58]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最长直线段</td>
+  <td>m</td>
+  <td colspan=3 >[DT59]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最短夹直线</td>
+  <td>m</td>
+  <td colspan=3 >[DT60]</td>
+ </tr>
+
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=4 width=325>预留行</td>
+  <td colspan=3 >[DT61]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=4 width=325>预留行</td>
+  <td colspan=3 >[DT62]</td>
+ </tr>
+
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 rowspan=11 height=209 width=114 >坡度统计</td>
+  <td>坡段</td>
+  <td>段</td>
+  <td colspan=3 >[DT63]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最大坡度</td>
+  <td>‰</td>
+  <td colspan=3 >[DT64]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最短坡长</td>
+  <td>m</td>
+  <td colspan=3 >[DT65]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最长坡长</td>
+  <td>m</td>
+  <td colspan=3 >[DT66]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>平均坡段长度</td>
+  <td>m</td>
+  <td colspan=3 >[DT67]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最大竖曲线半径</td>
+  <td>m</td>
+  <td colspan=3 >[DT68]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最小竖曲线半径</td>
+  <td>m</td>
+  <td colspan=3 >[DT69]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最长竖曲线</td>
+  <td>m</td>
+  <td colspan=3 >[DT70]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>最短竖曲线</td>
+  <td>m</td>
+  <td colspan=3 >[DT71]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>下行拔起坡段</td>
+  <td>段-m</td>
+  <td colspan=3 >[DT72]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>下行拔起高度</td>
+  <td>m</td>
+  <td colspan=3 >[DT73]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=33 height=684 width=36>路基统计</td>
+  <td colspan=2 width=225 style='width:169pt'>路基长度</td>
+  <td>Km</td>
+  <td colspan=3 >[DT74]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>路基占比</td>
+  <td>%</td>
+  <td colspan=3 >[DT75]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>路堤长度(单侧)</td>
+  <td>m</td>
+  <td colspan=3 >[DT76]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>路堑长度(单侧)</td>
+  <td>m</td>
+  <td colspan=3 >[DT77]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=5 height=110 style='height:81.0pt;'>填方</td>
+  <td>总填方</td>
+  <td>m<sup>3</sup></td>
+  <td>=计算总填方+清表土方+道床</td>
+  <td></td>
+  <td>[DT78]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>道床</td>
+  <td>m<sup>3</sup></td>
+  <td>=路基长度*指标</td>
+  <td align=right width=60>1.8375</td>
+  <td>[DT79]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>基床表层</td>
+  <td>m<sup>3</sup></td>
+  <td>=路基长度*指标</td>
+  <td align=right width=60 style=';
+  width:45pt'>1.9575</td>
+  <td>[DT80]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>基床底层</td>
+  <td>m<sup>3</sup></td>
+  <td>=路基长度*指标</td>
+  <td align=right width=60 style=';
+  width:45pt'>8.055</td>
+  <td>[DT81]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>路基本体</td>
+  <td>m<sup>3</sup></td>
+  <td>=计算总填方-表层-底层</td>
+  <td>　</td>
+  <td>[DT82]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=2 height=44>清表</td>
+  <td>路基清表面积</td>
+  <td>m<sup>2</sup></td>
+  <td>仅限路基本体下的覆盖表面积</td>
+  <td>　</td>
+  <td>[DT83]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>清表土方</td>
+  <td>m<sup>3</sup></td>
+  <td>=路基清表面积*指标</td>
+  <td>0.4</td>
+  <td>[DT84]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>挖方</td>
+  <td>总挖方</td>
+  <td>m<sup>3</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT85]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=4 height=85 style='height:63.0pt;'>水沟</td>
+  <td>排水沟长度</td>
+  <td>m</td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT86]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>排水沟垫层面积</td>
+  <td>m<sup>2</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT87]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>水沟填方</td>
+  <td>m<sup>3</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT88]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>水沟挖方</td>
+  <td>m<sup>3</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT89]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=7 height=133 style='height:100.8pt;'>防护栅栏</td>
+  <td>防护栅栏安全标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT90]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>栅栏长度</td>
+  <td>m</td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT91]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>3m栏片数</td>
+  <td>片</td>
+  <td colspan=2 rowspan=3 width=250 style='width:188pt'>3m单元长度（0&ordm;～6&ordm;地段）由2个1.405m*1.875m（长*高）栏片拼装而成；1.59m单元长度（6&ordm;～12&ordm;地段）由1个1.405m*1.875m（长*高）栏片拼装而成；1.15m单元长度（12&ordm;～36&ordm;地段）由1个0.965m*1.875m（长*高）栏片拼装而成</td>
+  <td>[DT92]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>1.59m栏片数</td>
+  <td>片</td>
+  <td>[DT93]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>1.15m栏片数</td>
+  <td>片</td>
+  <td>[DT94]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>混凝土立柱</td>
+  <td>根</td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT95]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>金属杆柱</td>
+  <td>根</td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT96]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 height=22 style='height:16.2pt;border-left:none'>植草面积</td>
+  <td>亩-m<sup>2</sup></td>
+  <td>仅路基边坡上的植草面积</td>
+  <td>　</td>
+  <td>[DT97]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=2 height=44>征用土地</td>
+  <td>覆盖面积</td>
+  <td>亩-m<sup>2</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT98]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>图幅面积</td>
+  <td>亩-m<sup>2</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT99]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=4 height=82  width=78 style='height:61.2pt;border-top:
+  none;width:59pt'>路基挡墙</td>
+  <td>路堤挡墙面积</td>
+  <td>m<sup>2</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT100]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>路堑挡墙长度</td>
+  <td>m</td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT101]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22>路堑挡墙面积</td>
+  <td>m<sup>2</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT102]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>挡墙处数</td>
+  <td>处</td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT103]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=2 height=44>护坡</td>
+  <td>隧道口护坡圬工面积</td>
+  <td>m<sup>2</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT104]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=22 style='height:16.2pt;;'>桥台护坡圬工面积</td>
+  <td>m<sup>2</sup></td>
+  <td>　</td>
+  <td>　</td>
+  <td>[DT105]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 height=22 style='height:16.2pt;border-left:none'>附属总圬工方</td>
+  <td>m<sup>3</sup></td>
+  <td>(挡墙+护坡）面积*0.6+水沟<span>面积*0.2</span></td>
+  <td>　</td>
+  <td>[DT106]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=8>绿色植被</td>
+  <td colspan=2>路堑灌木</td>
+  <td>株</td>
+  <td width=190>按路堑长度设置</td>
+  <td>　</td>
+  <td>[DT107]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=3 height=87>路堤植被</td>
+  <td width=147 >灌木</td>
+  <td>株</td>
+  <td width=190>按路堤高度H(0-3m)6株/双侧m，大于则8株/双侧m。</td>
+  <td>　</td>
+  <td>[DT108]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=29 width=147>中小乔木</td>
+  <td>株</td>
+  <td width=190>按路堤高度H(3-6m)段1株/2单侧m。</td>
+  <td>　</td>
+  <td>[DT109]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=29 width=147>高大乔木</td>
+  <td>株</td>
+  <td width=190>按路堤高度H(6m以上)段1株/3单侧m。</td>
+  <td>　</td>
+  <td>[DT110]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>桥下灌木</td>
+  <td>株</td>
+  <td width=190>按桥长设置,4株/m.</td>
+  <td align=right>4</td>
+  <td>[DT111]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=3 height=57 >草籽播种</td>
+  <td width=147>路堤草籽</td>
+  <td>KG</td>
+  <td width=190>按各自长度计算kg</td>
+  <td align=right>2</td>
+  <td>[DT112]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td width=147 '>路堑草籽<font></font></td>
+  <td>KG</td>
+  <td width=190>按各自长度计算kg</td>
+  <td align=right>5</td>
+  <td>[DT113]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td width=147 '>桥下草籽</td>
+  <td>KG</td>
+  <td width=190>按各自长度计算kg</td>
+  <td align=right>12.4</td>
+  <td>[DT114]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=16 height=422 width=36 >线路标志</td>
+  <td colspan=2 >公里标</td>
+  <td>个</td>
+  <td rowspan=10 class=xl81 style=''>按单侧计算，双侧请翻倍</td>
+  <td>　</td>
+  <td>[DT115]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 height=18>半公里标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>[DT116]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>百米标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>[DT117]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>曲线标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>[DT118]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>圆曲线标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>[DT119]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>HZ、ZH标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>[DT120]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>坡度标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>[DT121]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>隧道标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>[DT122]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>桥梁标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>[DT123]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2>涵洞渠标</td>
+  <td>个</td>
+  <td>　</td>
+  <td>[DT124]</td>
+ </tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 >用地界标</td>
+  <td>个</td>
+  <td width=190>路基30m一个每侧，桥40m一个每侧,双侧设置。</td>
+  <td>　</td>
+  <td>[DT125]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 height=37  width=225>司机鸣笛标</td>
+  <td>个</td>
+  <td width=190>桥涵处按座设置，双侧2个。</td>
+  <td>　</td>
+  <td>[DT126]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 height=38  >线路标桩</td>
+  <td>个</td>
+  <td width=190>按区间线路长60m一个。双侧2可折算为30m一个。</td>
+  <td>　</td>
+  <td>[DT127]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td colspan=2 height=34  width=225 style='height:25.8pt;;width:169pt'>隧道间通道联络标</td>
+  <td>个</td>
+  <td width=190>双线隧道可按需要设置,一般2个。单线不设为0</td>
+  <td>　</td>
+  <td>[DT128]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td rowspan=2 height=91>安全桩</td>
+  <td>A型</td>
+  <td>个</td>
+  <td>路桥段200米一个，双侧设置，减掉B型桩,人烟稀少处可以不设置。</td>
+  <td>　</td>
+  <td>[DT129]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td>B型</td>
+  <td>个</td>
+  <td width=190>桥隧两头两侧设置，应手动加上公跨铁。</font></td>
+  <td>　</td>
+  <td>[DT130]</td>
+ </tr>
+ <tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#FFFFFF';">
+  <td height=382>方案描述</td>
+  <td colspan=6>[DT131]</td>
+ </tr>
+
+</table>

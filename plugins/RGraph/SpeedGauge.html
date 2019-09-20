@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.rgraph.net/demos/gauge-adjustable.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./demos.css" type="text/css" media="screen">
+    
+    <script src="./RGraph.common.core.js"></script>
+    <script src="./RGraph.common.dynamic.js"></script>
+    <script src="./RGraph.common.effects.js"></script>
+    <script src="./RGraph.gauge.js"></script>
+      <script src="../ToolsCommon70.js"></script>
+</head>
+<body>
+
+  
+
+    <div id="cvs_rgraph_domtext_wrapper" class="rgraph_domtext_wrapper" style="overflow: visible; width: 250px; height: 250px; display: inline-block; position: relative;">
+    <canvas id="cvs" width="250" height="250" style="background-color: black; border-radius: 125px; box-shadow: gray 0px 0px 25px; border: 5px solid rgb(221, 221, 221); position: absolute; left: 0px; top: 0px; display: inline; float: none; cursor: default;">[No canvas support]</canvas>
+     </div>
+    
+    <script>
+        window.onload = function ()
+        {
+             var curval=300;      
+       try
+        {
+              var SGWorld = new ActiveXObject("TerraExplorerX.SGWorld70");
+              var ID= GetParamValue("ID", "0");
+              curval=parseFloat(SGWorld.ProjectTree.GetClientData(ID,"Value"));             
+	}
+	catch (e) { alert(e); }
+	
+            var gauge = new RGraph.Gauge({
+                id: 'cvs',
+                min: 0,
+                max: 400,
+                value: curval,
+                options: {
+                    anglesStart: RGraph.PI - (RGraph.PI / 4),
+                    anglesEnd: RGraph.TWOPI + (RGraph.PI / 4),
+                    shadow: false,
+                    textColor: 'white',
+                    tickmarksBigColor: 'white',
+                    tickmarksMediumColor: 'white',
+                    tickmarksSmallColor: 'white',
+                    colorsRanges: [],
+                    backgroundColor: 'black',
+                    borderInner: 'black',
+                    borderOuter: 'black',
+                    borderOutline: 'black',
+                    needleColors: ['red'],
+                    needleType: 'line',
+                    needleTail: true,
+                    needleWidth: 7,
+                    centerpinRadius: 0.1,
+                    titleBottom: '速度表',
+                   titleBold: true,
+                    titleBottomColor: 'white',
+                    labelsCentered: true,
+                    labelsOffset: 7,
+                    textAccessible: true
+                }
+            }).on('draw', function (obj)
+            {
+                // This circle becomes the border of the centerpin
+                RGraph.path2(obj.context, ['b','a',obj.centerx, obj.centery, 10, 0, RGraph.TWOPI, false,'f','#aaa']);
+            }).draw();
+            
+            //
+            // Add a click handler to the canvas to enable adjusting
+            //
+            gauge.canvas.onclick = function (e)
+            {
+                var ca  = e.target;
+                var obj = ca.__object__;
+
+                var value = obj.getValue(e);
+                obj.value = value;
+                obj.grow();
+            }
+        };
+    </script>
+</body></html>

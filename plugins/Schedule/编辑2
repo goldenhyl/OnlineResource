@@ -1,0 +1,18 @@
+ // event creating
+    dp.onTimeRangeSelected = function (args) {
+        var name = prompt("New event name:", "Event");
+        dp.clearSelection();
+        if (!name) return;
+        var e = new DayPilot.Event({
+            start: args.start,
+            end: args.end,
+            id: DayPilot.guid(),
+            resource: args.resource,
+            text: name
+        });
+        dp.events.add(e);
+        dp.message("Created");
+    };
+    
+    
+    + " -->竣工日期: " + args.e.end.toString("yyyy-MM-dd")+ "计划周期："+args.e.duration.days()+"天"

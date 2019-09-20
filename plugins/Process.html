@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=9;IE=edge;chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>三维选线设计流图</title>
+</head>
+<body>
+	<header class="cd-main-header text-center flex flex-column flex-center">
+    <h1>三维选线设计流图</h1>   
+  </header>
+ 
+ <a name="项目已创建"> </a>
+  <section class="cd-timeline js-cd-timeline">
+    <div class="container max-width-lg cd-timeline__container">
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--picture">
+          <img src="assets/img/cd-icon-picture.svg" alt="Picture">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>Step 1: 建立工程方案</h2>
+          <p class="color-contrast-medium">建立方案的实质是在结构树上建立方案的操作目录.一个项目文件(*.fly)中可以存在多个线路工程方案，有两种方式可以建立方案：</p>
+          <p class="color-contrast-medium">1)通过左侧【控制面板】中【导入方案】自动创建并生成方案结构树。</p>
+          <p class="color-contrast-medium">2)不选定任何节点，通过上面快捷菜单中【添加+】按键创建一个空白方案结构树。</p>
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date">项目已创建</span>            
+          </div>
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+
+ <a name="平面已设计"> </a>
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--movie">
+          <img src="assets/img/cd-icon-movie.svg" alt="Movie">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>Step 2: 创建或修改线路平面</h2>
+          <p class="color-contrast-medium">1) 创建方案平面，选择[线路]节点，通过快捷菜单中【添加+】按键开始画一个交点线,按ESC键退出。</p>
+          <p class="color-contrast-medium">2) 修改线路平面，选择[基线]节点，通过快捷菜单中【添加+】按键开始调整交点线,按ESC键退出。</p>
+          <p class="color-contrast-medium">3) 删除线路平面，选择[基线]节点，通过快捷菜单中【删除】按键删除基线。</p>
+          
+           <p class="color-contrast-medium"></p>
+           <p class="color-contrast-medium">注意：</p>
+             <p class="color-contrast-medium">【平面已设计】状态是后续所有步聚必须完成的过程。</p>
+             <p class="color-contrast-medium">任何阶段对线路平面的任何变更，都会导致设计过程回到【平面已设计】状态。</p>
+          
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date">平面已设计</span>            
+          </div>
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+
+ <a name="坡度已设计"> </a>
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--picture">
+          <img src="assets/img/cd-icon-picture.svg" alt="Picture">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>Step 3:设计纵断面</h2>
+          <p class="color-contrast-medium">1)可以通过选中[变坡点]文件夹后,按快捷菜单中【刷新】菜单自动生成初始的变坡点。</p>
+          <p class="color-contrast-medium">2)可以通过选中[基线]节点，按快捷菜单中【纵断面】菜单打开纵断面设计页面进行更直观的变坡线设计。进入纵断面设计页面前，请先进行轨面线更新。</p>
+	  <p class="color-contrast-medium">3)可以选中某个[变坡点]节点后,在属性栏中输入连续里程及高程来调整纵断面。</p>
+	  <p class="color-contrast-medium">4)可以选中某个[变坡点]节点后,右键点【Properties】属性菜单，通过向上、向下拉动调整变坡点高程，调整时如果坡度超限，标牌会红色显示。</p>
+	  <p class="color-contrast-medium">5)    上述状态下，按住Ctrl键+鼠标左键可以插入新的变坡点；按住Shift+鼠标左键可以将当前的变坡点调整到新的位置（新位置会按50m取整）。</p>
+	  <p class="color-contrast-medium">6)    上述状态下，按住Shift+键盘方向键可以同样实现变坡点调整：左键向小里程移动50m，右键向大里程移动50m，向上键高程增加0.5m，向下键高程减少0.5m。</p>
+	  
+	  <p class="color-contrast-medium"></p>
+	  <p class="color-contrast-medium">任何阶段对纵断面的任何修改，都会导致设计过程回到【坡度已设计】状态。</p>
+	  	  
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date">坡度已设计</span>            
+          </div>
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+
+ <a name="轨面线已生成"> </a>
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--location">
+          <img src="assets/img/cd-icon-location.svg" alt="Location">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>Step 4:轨面线生成</h2>
+          <p class="color-contrast-medium">选择[基线]节点，按快捷菜单中【刷新】菜单自动生成轨面线。</p>
+          <p class="color-contrast-medium">生成轨面线是开展桥梁、隧道、路基插旗建模的基本要求。</p>
+
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date">轨面线已生成</span>            
+          </div>
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+
+ <a name="完成插旗"> </a>
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--location">
+          <img src="assets/img/cd-icon-location.svg" alt="Location">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>Step 5:站场、桥梁、隧道插旗</h2>
+          <p class="color-contrast-medium">1)优先于桥梁、隧道之前完成站场部署设计。</p>
+          <p class="color-contrast-medium">2)站场添加：在[车站]节点选中时，通过快捷菜单中【添加+】按键，选择[正线站]在线位附近站中里程处按下鼠标左键即可以实现站场添加。</p>
+          <p class="color-contrast-medium">3)站场调整：选中某个车站，在属性栏中进行属性变更或按属性栏上部的【配站设计】后，按快捷菜单中【刷新】菜单更新站场模型。</p>
+          <p class="color-contrast-medium">4)桥梁隧道自动插旗：选中[桥梁]或[隧道]组节点，按快捷菜单中【刷新】菜单会自动生成桥梁隧道并自动对其进行命名。</p>
+          <p class="color-contrast-medium">5)插旗调整：选中插旗节点，修改属性后，按快捷菜单中【刷新】菜单会自动同时生成桥梁隧道并自动对其进行命名。</p>
+          <p class="color-contrast-medium">6)插旗删除：选中插旗节点，按快捷菜单中【删除】菜单会删除掉插旗。桥梁隧道支持组节点上的批量删除，站场不支持批量删除。</p>
+          <p class="color-contrast-medium">7)纵断面上的插旗调整：选中某座桥梁或隧道插旗节点后，按快捷菜单中【纵断面】菜单后弹出插旗设计页面，可对该插旗起止位置进行交互设定。</p>
+          <p class="color-contrast-medium">8)桥梁孔跨设计：选中某座桥梁节点后，按快捷菜单中【纵断面】菜单后弹出插旗设计页面，在该页面可同时对桥梁孔跨进行设计。</p>
+
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date">完成插旗</span>
+         <!--   <a href="#0" class="btn btn--subtle">Read more</a>  -->
+          </div>
+        </div> <!-- cd-timeline__content -->
+      </div> <!-- cd-timeline__block -->
+      
+<a name="路基已生成"> </a>
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--movie">
+          <img src="assets/img/cd-icon-movie.svg" alt="Movie">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>Step 6:完成路基自动插旗与建模</h2>
+          <p class="color-contrast-medium">路基建模需要在完成站场、桥梁、隧道插旗建模后进行。</p>
+          <p class="color-contrast-medium">1)路基建模之前，可以通过方案节点调整修改路基建模的基本参数。</p>
+          <p class="color-contrast-medium">2)路基建模会自动对路基进行切割成不大于300m的节点对象。</p>
+          <p class="color-contrast-medium">3)在[路基]组节点上，按快捷菜单中【刷新】菜单会自动生成路基并对其进行命名。</p>
+          <p class="color-contrast-medium">4)对每一个路基节点，修改属性后，按快捷菜单中【刷新】菜单会自动更新该路基模型。</p>
+          <p class="color-contrast-medium">6)路基删除：选中插旗节点，按快捷菜单中【删除】菜单会删除掉路基。支持组节点上的批量删除。</p>
+          
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date">路基已生成</span>
+          </div>
+        </div> <!-- cd-timeline__content -->        
+      </div> <!-- cd-timeline__block -->
+      
+      <a name="后续应用"> </a>
+      <div class="cd-timeline__block">
+        <div class="cd-timeline__img cd-timeline__img--movie">
+          <img src="assets/img/cd-icon-movie.svg" alt="Movie">
+        </div> <!-- cd-timeline__img -->
+
+        <div class="cd-timeline__content text-component">
+          <h2>后续应用</h2>
+          <p class="color-contrast-medium">三维数字工程生成后，可以发布网络、VR/AR及移动终端进行直观的查看、分析、仗量及标注。</p>
+          <p class="color-contrast-medium">1)可以通过按快捷菜单中【横断面】菜单实时查看线路各处的剖切断面结构。</p>
+          <p class="color-contrast-medium">2)可以通过按快捷菜单中【导出】菜单将方案导出成KML、MDB、AutoCAD DWG、EICAD交点线及Excel等数据格式。</p>
+          <p class="color-contrast-medium">3)可以通过控制面板中的【工程数量】生成全方案的工程统计数量。</p>
+          <p class="color-contrast-medium">4)可以通过控制面板中的【交通模拟】或【飞行鸟瞰】形成动态的模拟巡游效果。</p>
+          <p class="color-contrast-medium">5)可以通过控制面板中的【区域表】自动生成沿线经过的行政区段。</p>
+          
+          当然，三维数字铁路的应用还有很多......
+          
+          <div class="flex justify-between items-center">
+            <span class="cd-timeline__date">后续应用</span>
+          </div>
+        </div> <!-- cd-timeline__content -->        
+      </div> <!-- cd-timeline__block -->
+      
+    </div>
+  </section> <!-- cd-timeline -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

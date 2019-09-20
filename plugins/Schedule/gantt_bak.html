@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>工程项目进度图</title>
+   <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+	<!-- head -->
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--    demo stylesheet -->
+ 
+
+	<!-- helper libraries -->
+	<script src="../Jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
+        <script src="./daypilot-all.min.js?v=2019.1.3521" type="c"></script>
+ 
+	<!-- daypilot libraries -->
+    
+    
+
+
+	<!-- /head -->
+</head>
+<body>
+
+	
+<object id="SGWorld" style="display:none" classid="CLSID:3A4F9199-65A8-11D5-85C1-0001023952C1">    </object>
+<div id="dp"></div>
+	
+<script type="text/javascript">
+ 
+    var dp = new DayPilot.Scheduler("dp");   
+    
+    dp.viewType = "Gantt";
+    dp.cellWidth = 30;
+    dp.durationBarMode = "PercentComplete";
+    dp.onBeforeEventRender = function(args) {
+        args.e.html = args.e.complete + "%";
+    };
+    
+    alert("ok");
+    
+    dp.startDate = "2019-01-01";
+    dp.days = 1000;
+    dp.scale = "Day";
+    dp.timeHeaders = [
+        { groupBy: "Month", format: "MMM yyyy" },
+        { groupBy: "Cell", format: "d" }
+    ];
+
+   // dp.bubble = new DayPilot.Bubble();
+    
+
+    dp.rowHeaderColumns = [
+        {name: "工程名称"},
+        {name: "工程长度"}
+    ];
+
+   
+    
+    var gid = GetParamValue("ObjectID", "0"); 
+    alert(gid);
+    
+    var objid=SGWorld.ProjectTree.GetNextItem(gid,11);
+    if (objid=="") return;
+   
+    var sdate,edate,objname;
+     sdate=SGWorld.ProjectTree.GetClientData(objid,"StartBuildingDate");
+     edate=SGWorld.ProjectTree.GetClientData(objid,"EndBuildingDate");     
+     objname =SGWorld.ProjectTree.GetItemName(objid);
+     var len,sl,el;
+     el=parseFloat(SGWorld.ProjectTree.GetClientData(objid,"EndLC"));
+     sl=parseFloat(SGWorld.ProjectTree.GetClientData(objid,"StartLC"));     
+     len=el-sl;
+     
+     AddTask(objname,len,sdate,edate);
+    
+    
+    objid=SGWorld.ProjectTree.GetNextItem(objid,13);
+    while(objid!="")
+    {       
+    
+        sdate=SGWorld.ProjectTree.GetClientData(objid,"StartBuildingDate");
+        edate=SGWorld.ProjectTree.GetClientData(objid,"EndBuildingDate");     
+        objname =SGWorld.ProjectTree.GetItemName(objid);
+	
+        el=parseFloat(SGWorld.ProjectTree.GetClientData(objid,"EndLC"));
+        sl=parseFloat(SGWorld.ProjectTree.GetClientData(objid,"StartLC"));     
+        len=el-sl;
+     
+	 objid=SGWorld.ProjectTree.GetNextItem(objid,13);
+    }
+    
+
+
+    dp.init();
+ 
+ function AddTask(name,len,sd,ed)
+ {
+          var e = new DayPilot.Event({
+            start: sd,
+            end: ed,
+            id: DayPilot.guid(),
+            text: name,
+            complete: Math.floor(Math.random() * 101), // 0 to 100
+            columns: [ { html: "长度： " + len.toFiex(2) + "m"}]
+        });
+        dp.events.add(e);
+   
+ }
+</script>
+ 
+<script type="text/javascript">
+$(document).ready(function() {
+    var url = window.location.href;
+    var filename = url.substring(url.lastIndexOf('/')+1);
+    if (filename === "") filename = "index.html";
+    $(".menu a[href='" + filename + "']").addClass("selected");
+
+    $(".menu-title").click(function() {
+        $(".menu-body").toggle();
+        if ($(".menu-body").is(":visible")) {
+            scrollTo({
+                top: pageYOffset + 100,
+                behavior: "smooth"
+            });
+        }
+    });
+});
+        
+</script>
+
+</body>
+</html>
+

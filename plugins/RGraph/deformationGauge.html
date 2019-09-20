@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.rgraph.net/demos/gauge-csv-reader.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./demos.css" type="text/css" media="screen">
+    
+    <script src="RGraph.common.core.js"></script>
+    <script src="RGraph.common.csv.js"></script>
+    <script src="RGraph.gauge.js"></script>
+    <script src="../ToolsCommon70.js"></script>
+    <title>变形监测表</title>
+     
+</head>
+<body>
+
+
+
+    <div id="cvs_rgraph_domtext_wrapper" class="rgraph_domtext_wrapper" style="overflow: visible; width: 250px; height: 250px; display: inline-block; position: relative;">
+    <canvas id="cvs" width="250" height="250" style="cursor: default; position: absolute; left: 0px; top: 0px; display: inline; float: none;">[No canvas support]</canvas>
+    </div>
+    
+    <script>
+          
+        var curval=25;
+        try
+        {
+              var SGWorld = new ActiveXObject("TerraExplorerX.SGWorld70");
+              var ID= GetParamValue("ID", "0");
+              curval=parseFloat(SGWorld.ProjectTree.GetClientData(ID,"Value"));             
+	}
+	catch (e) { alert(e); }
+	
+            var gauge = new RGraph.Gauge({
+                id: 'cvs',
+                min: -50,
+                max: 50,
+                value: curval,
+                options: {
+               	    titleBottom: '(mm)',
+                    titleTop: '变形计',
+                    titleBold: true,
+                    shadowBlur: 10,
+                    shadowColor: '#ddd',
+                    valueTextUnitsPost: 'mm',
+                    tickmarksSmall: 50,
+                    tickmarksMedium: 5,
+                    tickmarksBig: 5,
+                    labelsCounts: 10,
+                    colorsRanges: [[-50,-40,'red'], [-40,-30,'yellow'], [-30,30, '#cfc'], [30,40, 'yellow'], [40,50,'red']]
+                }
+            }).grow();
+      
+    </script>
+
+</body></html>

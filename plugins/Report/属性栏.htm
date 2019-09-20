@@ -1,0 +1,90 @@
+﻿<style>
+      .s8 {font-family:  Arial, Helvetica; font-size: 14px; font-style: normal; font-weight: normal; color: #3B3B3B; text-decoration: none;}
+      .s9 {font-family:  Arial, Helvetica; font-size: 13px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none;}
+      .s8w {font-family:  Arial, Helvetica; font-size: 11px; font-style: normal; font-weight: normal; color: #FFFFFF; text-decoration: underline;}
+      .s12 {font-family:  Arial, Helvetica; font-size: 20px; font-style: normal; font-weight: normal; color: #000000; text-decoration: none;}
+
+table.altrowstable {
+     font-family: verdana,arial,sans-serif;
+     font-size:11px;
+     color:#333333;
+     border-width: 1px;
+     border-color: #a9c6c9;
+     border-collapse: collapse;
+ }
+ table.altrowstable th {
+     border-width: 1px;
+     padding: 4px;
+     border-style: solid;
+     border-color: #a9c6c9;
+ }
+ table.altrowstable tr{ 
+	 background-color:#FFFFFF;
+ }
+ table.altrowstable td {
+     border-width: 1px;
+     padding: 4px;	 
+     border-style: solid;
+     border-color: #a9c6c9;
+ }
+ .oddrowcolor{
+     background-color:#d4e3e5;
+ }
+ .evenrowcolor{
+     background-color:#c3dde0;
+ }
+</style>	
+
+<script>
+function Init(){	
+   ShowProperty();  
+}
+
+
+function ShowProperty()
+{
+   var curid=SGWorld.ProjectTree.GetNextItem("",10);
+   var pid =SGWorld.ProjectTree.GetNextItem(curid,15);
+   
+   var sn =SGWorld.ProjectTree.GetItemName(curid);
+   
+   if(pid=="") return;
+    var  str=sn;
+     str=str + "<table cellspacing='0' cellpadding='0' width='98%'  class='altrowstable' id='alternatecolor'>";
+     	str =str +"<tr onmouseover=\"this.style.backgroundColor='#ffff66';\" onmouseout=\"this.style.backgroundColor='#FFFFFF';\">";
+     	str =str +"<td width='35%'>属性名</td><td>属性值</td></tr>";
+     	
+     var fieldnames=SGWorld.ProjectTree.GetClientData(pid,"SubFieldName").split(';');
+     var fields=SGWorld.ProjectTree.GetClientData(pid,"SubField").split(';');
+   
+     var v="";
+     for(var k=0;k<fieldnames.length;k++)
+     {        
+        if(fields[k]=="*") continue;
+        
+        if(fields[k]!="_")
+        {
+                str =str +"<tr onmouseover=\"this.style.backgroundColor='#ffff66';\" onmouseout=\"this.style.backgroundColor='#FFFFFF';\">";
+        	v=SGWorld.ProjectTree.GetClientData(curid,fields[k]);     	
+     		str =str +"<td>"+ fieldnames[k] +"</td><td>"+v+"</td></tr>";
+        }else
+        {
+        	str =str +"<tr onmouseover=\"this.style.backgroundColor='#ffff66';\" onmouseout=\"this.style.backgroundColor='#888888';\">";
+        	str =str +"<td colspan='2' align='center' bgcolor='#888888'>"+ fieldnames[k] +"</td></tr>";
+        }
+     	
+     }
+    
+     str=str+"</table>";
+     
+   document.getElementById('tableID').innerHTML = str;
+}
+
+</script>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="border: 0px" id="Body" onload="Init();" style = "">
+<object id="SGWorld" classid="CLSID:3a4f9197-65a8-11d5-85c1-0001023952c1"></object>
+
+<div id="tableID"></div>
+</body>
+

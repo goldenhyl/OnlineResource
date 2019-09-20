@@ -1,0 +1,199 @@
+﻿<html style="height:100%">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<title>三维线路设计系统<RIM Designer V1.0></title>
+<style type="text/css">
+
+.s8w {font-family:  Calibri,Arial; font-size: 10pt; font-style: normal; font-weight: lighter; color: #ffffff; text-decoration: none;}
+.s9w {font-family:  Calibri,Arial; font-size: 13pt; font-style: normal; font-weight: lighter; color: #ffffff; text-decoration: none;line-height:16pt}
+.s9b {font-family:  Calibri,Arial; font-size: 11pt; font-style: normal; font-weight: lighter; color: rgba(255,255,255,0.8); text-decoration: none;}
+.s12w {font-family:  Calibri,Arial; font-size: 13pt; font-style:normal; font-weight: lighter; color: #ffffff; text-decoration: none;}
+.logoImg{margin-top:15pt; height:50pt;}
+.menuImg {width:37.5pt;}
+.recentDiv {border:1pt solid rgba(255,255,255,0.1); width:100%; background-color:rgba(0, 0, 50, 0.2); margin-top:4pt; padding-top:5pt; padding-bottom:5pt;  padding-left:12pt; }
+.recent {line-height:5pt; cursor:pointer; }
+.recent:hover		{color: #3dc9f0; }
+li {cursor:pointer; line-height:12pt;}
+A:link		{color: #FFFFFF; text-decoration: none;cursor:pointer;}
+A:visited	{color: #FFFFFF; text-decoration: none;cursor:pointer;}
+A:hover		{color: #3dc9f0; text-decoration: none;cursor:pointer;}
+</style>
+
+</head>
+<body style="height:100%; width:100%; background: url(img/background.jpg) no-repeat center center fixed; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;margin:0px 0px 0px 0px; overflow: hidden;" onload="Init()"> <!-- oncontextmenu="return false;"--> 
+<table style="height:100%; width:100%; "    border="0px" cellspacing="0" cellpadding="10pt" class="s9w">
+<tr >
+    <td width="300pt"  align="center">
+    <span id="LogoSpan"><p><img src='img/softname.png'  height='200pt'  border=0 alt='' /> </span>
+    </td>
+</tr>
+
+<tr >
+    <td align="center" >
+        <table class="s9w" width="50%;"  border="0px"><tr>
+             <td valign="top" align="center">
+                <a href="javascript:MenuInvoke(1001,'');"><img class="menuImg" src="img/openfile.png" alt="" style="border:0px;" /> <br />从文件打开项目</a>                 
+            </td>    
+             <td valign="top" align="center">               
+                <a href="http://lidar/SG/admin/telayers.aspx?Type=OpenProject&caption=SkylineGlobe%20Layers"><img class="menuImg" src="img/server_earth.png" alt="" style="border:0px;" /> <br />从服务器中创建项目</a> 
+            </td>           
+            <td  valign="top" align="center">
+            <a href='javascript:OpenFly("http://www.skylineglobe.com/SkylineGlobeLayers/SG_ExternalFlys/skylineglobe7.fly");'><img class="menuImg" src="img/globe.png" alt=""  style="border:0px;" /><br/>打开展示项目 </a>
+            </td>
+            <td  valign="top" align="center">
+            <a href="http://192.10.12.40:8000" target="blank"><img class="menuImg" src="img/video.png" alt=""  style="border:0px;" /> <br />查看展示视频</a>
+            </td>
+            </tr>
+         </table>
+    </td>
+</tr>
+<tr>
+<td align="center" style="min-width:50%">
+    <table ><tr><td align="left">
+        <span class="s12w" >最近文件列表：</span>
+        <div class="recentDiv" id="recentDivID">
+            <span id="recentsSpan" class="s9b" ></span>
+        </div>
+
+    </td></tr>
+    </table>
+</td>
+</tr>
+   <!--
+
+<tr align="center" >
+<td align="center" width="60%" style="min-width:20%">
+<table><tr><td>
+    <table ><tr><td align="left">
+        <span class="s12w" >最近文件列表：</span>
+        <div class="recentDiv" id="recentDivID">
+            <span id="recentsSpan" class="s9b" ></span>
+        </div>
+
+    </td></tr>
+    </table>
+    </td><td >
+     <table><tr><td align="right">
+        <span class="s12w" >服务器地形列表:</span>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <marquee style="WIDTH: 200px; HEIGHT: 220px" scrollamount="2" direction="up" >
+        <div class="DefaultMTB" id="DefaultMTBID">
+            <span id="DefaultMTBSpan" class="s9b" ></span>
+        </div>
+	</marquee >
+    </td></tr>
+    </table>
+</td></tr></table>
+</td>
+</tr>
+-->
+<tr valign="bottom" style="height:100%">
+<td  align="center" class="s8w"  style="height:100%">
+     <a href="mailto:84522593@qq.com" >84522593@qq.com </a> &nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;
+     联系电话：15902745079 &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+     QQ:84522593 <br />
+    
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本软件可应用于铁路、地铁、公路、电力、管线及河道的线路三维设计与自动化线路建模功能，<br>
+     支持全屏触控设计，提供参数化建模能力，建模成果可用于网络发布、移动应用及全生命周期应用开发。<br> <span  align="center">版权所有，盗版必究。</span> <br />
+     <br />
+    
+    
+    <img src="img/Logo.png" style="margin-bottom:8pt; width:481pt;" alt="" />
+    </td>
+</tr>
+
+</table>
+<!--<object id="SGWorld" classid="CLSID:3a4f9197-65a8-11d5-85c1-0001023952c1" style="visibility:hidden;height:0px "></object>-->
+</body>
+
+
+
+<script language="JavaScript">
+    var IMenu = null;
+    var SGWorld = new ActiveXObject("TerraExplorerX.SGWorld70");
+    var gProjects = [];
+    var mpts=[];
+//--------------------------------------
+// 
+function Init() {
+    
+    var recents = SGWorld.GetParam(8500);
+    
+    var projects = recents.split("|");
+    var recentText = ""; // "<ul>";
+
+    for (var i = 0; i < projects.length && i<10; i++) {
+        gProjects[i] = projects[i];
+        recentText += "<span class='recent' onclick='OpenFlyIndex(\"" + i + "\");'> " + (i+1) + "  &nbsp;&nbsp;&nbsp;&nbsp;" + projects[i] + "</span><br/>";
+    }
+    recentText += "</ul>";
+    var recentSpan = document.getElementById("recentsSpan");
+    recentSpan.innerHTML = recentText;
+    
+    recentText = ""; // "<ul>";
+    
+    try
+    {
+         xmlDoc=new ActiveXObject("Microsoft.XMLDOM"); 
+	xmlDoc.async="false" 
+	xmlDoc.load("http://lidar:9999/maps.xml"); 
+	var num=xmlDoc.getElementsByTagName("Row").length; 	
+	
+	for(i=0;i<num;i++) 
+	{ 	
+		mpts[i]=xmlDoc.getElementsByTagName("Name")[i].childNodes[0].nodeValue;
+	}
+	xmlDoc=null;
+
+	    for (var i = 1; i < num; i++) 
+	    {        
+	    //中国西部E70-E107.mpt@192.10.12.38:9999
+	        recentText += "<span class='recent' onclick='OpenFly(\"" +  mpts[i] + "@lidar:9999\");'> " + "  &nbsp;&nbsp;&nbsp;&nbsp;" + mpts[i] + "</span><br/>";
+	    }
+	    recentText += "</ul>";
+	    if(num<1) recentText = "地形服务器链接不上......";
+    }catch(err)
+    {
+       recentText = "服务器链接失败！";
+    }
+    var recentSpan = document.getElementById("DefaultMTBSpan");
+    recentSpan.innerHTML = recentText;
+    
+
+}
+//--------------------------------------
+// MenuInvoke
+function MenuInvoke(MenuID,param1) {
+    SGWorld.Command.Execute(MenuID,param1);
+}
+//--------------------------------------
+// OpenFly
+function OpenFly(flyFile) {
+
+	// We need to set the SGWorld.Application.SuppressUIErrors to false so that if there is a problem loading the file, the user will see it.
+    var suppressUIErrorsOriginal = SGWorld.Application.SuppressUIErrors;
+    SGWorld.Application.SuppressUIErrors = false;
+
+    SGWorld.Project.Open(flyFile);
+
+    SGWorld.Application.SuppressUIErrors = suppressUIErrorsOriginal;
+}
+//--------------------------------------
+// OpenFlyIndex
+function OpenFlyIndex(i) {
+
+    if (gProjects[i].length == 0)
+        return;
+
+	// We need to set the SGWorld.Application.SuppressUIErrors to false so that if there is a problem loading the file, the user will see it.
+    var suppressUIErrorsOriginal = SGWorld.Application.SuppressUIErrors;
+    SGWorld.Application.SuppressUIErrors = false;
+
+    SGWorld.Project.Open(gProjects[i]);
+
+    SGWorld.Application.SuppressUIErrors = suppressUIErrorsOriginal;
+}
+</script>
+
+</html>
+

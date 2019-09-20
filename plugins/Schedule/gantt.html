@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ToolTitle</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=edge;chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+
+</head>
+<body>
+    
+<table border=0 style="width:100%;" id="mainTbl" cellspacing=0 cellpadding=1>
+    <tr style="width:100%; height:40px;">   
+     <td align="left" style="width:20%;">         
+         <span class="i18n" style="font-size:24px" id= "flagid">工程进度图</span>    
+     </td>
+    <td align="center" style="width:35%;">          
+   
+    
+  
+        起始日期：<input type="date" style="background-color:#2b2b2b; border:0px solid black; color:White; height:25px; width:70px;" id="startdate" ></input> <span style="padding-left:30px;" />  
+        终止日期：<input type="date" style="background-color:#2b2b2b; border:0px solid black; color:White; height:25px; width:70px;" id="enddate" ></input> <span style="padding-left:30px;" />          
+        建设周期：<input style="background-color:#2b2b2b; border:0px solid black; color:White; height:25px; width:70px;" id="lastdays" value="1" readonly="readonly"></input> 
+        设定进度演算日期：<input type="date" style="background-color:#2b2b2b; border:0px solid black; color:White; height:25px; width:70px;" id="Setdate" ></input> <span style="padding-left:30px;" />  
+        
+         <select id="charttype">
+        <option value="Day">日表</option>
+        <option value="Week">周表</option>                
+        </select>
+        
+        <button style="background-color:#2b2b2b; border:0px solid black; color:White; height:30px;" id="SetButton" onclick="SetDuration();">设定</button>
+        <span style="padding-left:10px;" />
+        
+        综合进度：<input style="background-color:#2b2b2b; border:0px solid black; color:White; height:25px; width:70px;" id="ratio" value="1" readonly="readonly"></input> 
+    </td>
+    
+    <td align="right">
+        <input type="checkbox" name="num" value="" onclick="if(this.checked==true) { isFollow=true; } else { isFollow=false; };"/> 三维跟随
+        <button style="background-color:#2b2b2b; border:0px solid black; color:White; height:25px;" id="CreateLayerButton" onclick="SaveProcess();">保存</button>
+        
+    <select id="area">
+        <option value="full">Full</option>
+        <option value="viewport">Viewport</option>        
+        <option value="range">Range</option>
+    </select>
+    
+        <button style="background-color:#2b2b2b; border:0px solid black; color:White; height:25px;" id="CreateLayerButton" onclick="Export();">导出</button>        
+        <span style="padding-left:10px;" />
+    </td>
+</tr>
+</table>
+</div>
+
+<div id="dp"></div>
+
+    <object id="SGWorld" style="display:none" classid="CLSID:3A4F9199-65A8-11D5-85C1-0001023952C1">    </object>
+
+	<script language="javascript" src="../ToolsCommon70.js"></script>
+	<script language="javascript" type="text/javascript" src="../jquery/jquery.min.js"></script>
+	<script src="daypilot-all.min.js?v=2019.1.3521" type="text/javascript"></script>
+        <script language="javascript" type="text/javascript" src="ganttcommon.js"></script>
+ 	<script language="javascript" type="text/javascript" src="gantt.js"></script>
+
+<script language="JavaScript">
+  
+
+
+$(document).ready(Init());
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+<!--Sig:00000040Oy4ka67wzmSZpTNdyZZeCl#qjoOvzkq.MoMVSQG.Htu2.YFpMkqt.ydORXGhzNI4RqdrzuvOGw4Qd9Lgq5wTXiJJ-->

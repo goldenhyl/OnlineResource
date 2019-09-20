@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://www.rgraph.net/demos/gauge-bank.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="./RGraph.common.core.js"></script>
+    <script src="./RGraph.common.dynamic.js"></script>
+    <script src="./RGraph.common.effects.js"></script>
+    <script src="./RGraph.gauge.js"></script>
+    <script src="../ToolsCommon70.js"></script>
+    <link rel="stylesheet" href="./demos.css" type="text/css" media="screen">
+    
+    <title>RGraph demo: A bank of adjustable Gauge charts</title>
+
+    <meta name="robots" content="noindex">
+    <meta name="description" content="A bank of adjustable Gauge charts">
+     
+</head>
+<body>
+    
+   
+    <canvas id="cvs" width="750" height="250" style="border: 1px solid gray; cursor: default;">[No canvas support]</canvas>
+
+    <script>
+        window.onload = function ()
+        {
+            
+             var pressval=2.6;
+             var tempval=28;
+             var windspeedval=35;
+                   
+	       try
+	        {
+	              var SGWorld = new ActiveXObject("TerraExplorerX.SGWorld70");
+	              var ID= GetParamValue("ID", "0");
+	              pressval=parseFloat(SGWorld.ProjectTree.GetClientData(ID,"PressValue"));    
+	              tempval=parseFloat(SGWorld.ProjectTree.GetClientData(ID,"Value"));  
+	              windspeedval=parseFloat(SGWorld.ProjectTree.GetClientData(ID,"WindSpeed"));           
+		}
+		catch (e) { alert(e); }
+	
+	
+            gauge1 = new RGraph.Gauge({
+                id: 'cvs',
+                min:-5,
+                max: 20,
+                value: pressval,
+                options: {                   
+                    titleBottom: 'Pa',
+                    titleBottomColor: '#aaa',
+                    centerx: 125,
+                    radius: 120,
+                    titleTop: '大气压',
+                    titleBold: true,
+                    adjustable: true,
+                    textAccessible: false
+                }
+            }).draw();
+
+            gauge2 = new RGraph.Gauge({
+                id: 'cvs',
+                min:-40,
+                max: 60,
+                value: tempval,
+                options: {
+                    centerx: 375,
+                    radius: 120,
+                     titleBottom: '℃',
+                    titleBottomColor: '#aaa',
+                    adjustable: true,
+                    titleBold: true,
+                    title: '温度',
+                    titleBottomColor: '#aaa',
+                    textAccessible: false
+                }
+            }).draw();
+
+            gauge3 = new RGraph.Gauge({
+                id: 'cvs',
+                min:0,
+                max: 100,
+                value: windspeedval,
+                options: {
+                    centerx: 625,
+                    radius: 120,
+                    titleBottom: 'Km/h',
+                    titleBottomColor: '#aaa',
+                    adjustable: true,
+                    titleBold: true,
+                    title: '风速',
+                    titleBottomColor: '#aaa',
+                    textAccessible: false
+                }
+            }).draw();
+            
+            gauge3.canvas.onmousemove = function (e)
+            {
+                var mouseXY = RGraph.getMouseXY(e);
+                var obj     = RGraph.ObjectRegistry.getObjectByXY(e);
+                
+                if (obj) {
+                    RGraph.ObjectRegistry.bringToFront (obj);
+                }
+            }
+        };
+    </script>
+    
+    
+
+    
+
+</body></html>
